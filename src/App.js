@@ -5,6 +5,7 @@ import youtube from './api/youtube';
 import VideoDetail from './components/video_detail';
 import VideoList from './components/video_list';
 import Header from './components/header';
+import Footer from './components/footer';
 
 
 
@@ -29,17 +30,19 @@ handleVideoSelect = (video) => {
 
 render() {
   return (
-      <div className='ui container'>
+      <div className='page container'>
           <Header />
-          <SearchBar handleFormSubmit={this.handleSubmit}/>
-          <div className='ui grid'>
+          
+          <div className='video grid'>
               <div className="ui row">
-              <div className="eleven wide column">
-                            <VideoDetail video={this.state.selectedVideo}/>
+              <div className="video Item column">
+              <SearchBar handleFormSubmit={this.handleSubmit}/>
+                            <VideoDetail video={this.state.selectedVideo} />
                         </div>
-                        <div className="five wide column">
+                        <div className="video-List-column">
                             <VideoList handleVideoSelect={this.handleVideoSelect} videos={this.state.videos}/>
                         </div>
+                    <Footer />
               </div>
           </div>
       </div>

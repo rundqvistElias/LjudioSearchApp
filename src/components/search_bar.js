@@ -19,11 +19,11 @@ class SearchBar extends Component {
 
     render() {
         return (
-            <div className='search-bar ui segment'>
-                <form onSubmit={this.handleSubmit} className='ui form'>
+            <div className='search-bar segment'>
+                <form onSubmit={this.handleSubmit} className='user form'>
                     <div className='field'>
                         <label htmlFor="video-search"></label>
-                        <input className="search" onChange={this.handleChange} name='video-search' type="text" value={this.state.term}/>
+                        <input className="search" onChange={this.handleChange} placeholder="Enter an Artist or Song" autoComplete="off" name='video-search' type="text" value={this.state.term}/>
                     </div>
                 </form>
             </div>

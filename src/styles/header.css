@@ -1,5 +1,4 @@
 .navbar{
-    top:0em;
     height:50px;
     position: relative;
     display: flex;
@@ -12,8 +11,40 @@
     text-transform: uppercase;
     overflow: hidden;
     font-family: "Roboto", sans-serif;
+
+   
         
  
+}
+.logoWrapper{
+    display:flex;
+    
+}
+
+.stylish{
+    font-weight: bold;
+}
+
+.logo{
+    padding-left:4px;
+    color:  #ea4f4c;
+}
+
+.navigation{
+    display:flex
+}
+
+li{
+    opacity: 1;
+    list-style-type: none;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3 ease-in-out;
+}
+
+.parent {
+    padding: 0 10px;
+    cursor: pointer;
 }
 .navitems{
     display: flex;

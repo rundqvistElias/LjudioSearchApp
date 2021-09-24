@@ -1,17 +1,23 @@
 import React from 'react';
-import '../styles/header.css'; 
+import '../styles/header.css';
+
 
 
 const Header = () =>{
+
+
+    function refreshPage() {
+        window.location.reload(false);
+      }
+
     return(
     <nav className="navbar">
-            <div class="logoWrapper">
-                <span class="stylish">LJUDIO</span>
-                <span class="logo">Logo</span>
+            <div className="logoWrapper">
+                <span className="stylish">LJUDIO</span>
+                <span className="logo">APP</span>
             </div>
-            <ul class="navigation">
-                <li class="parent">Home</li>
-                <li class="parent">About</li>
+            <ul className="navigation">
+                <li className="parent"  onClick={refreshPage}>Home</li>
             </ul>
     </nav>
     )
