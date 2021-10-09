@@ -1,0 +1,6 @@
+API nyckel = 'AIzaSyDq6B675_RNtizYSUYNf_fwAc7kUTV0qNU' eller egen youtube data v3 key
+copy till const KEY = '' i youtube.js
+
+npm i
+
+npm start
