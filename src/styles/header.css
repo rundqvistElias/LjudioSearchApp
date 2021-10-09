@@ -31,10 +31,12 @@
 }
 
 .navigation{
-    display:flex
+    display:flex;
+
+    
 }
 
-li{
+.routeHome{
     opacity: 1;
     list-style-type: none;
     color: white;
@@ -42,9 +44,15 @@ li{
     transition: all 0.3 ease-in-out;
 }
 
+.li{
+    list-style-type: none;
+}
+
+
 .parent {
     padding: 0 10px;
     cursor: pointer;
+    list-style-type: none;
 }
 .navitems{
     display: flex;

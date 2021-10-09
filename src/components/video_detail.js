@@ -4,12 +4,14 @@ import '../styles/video.css';
 import MusicLogo from '../assets/musiclogo.jpg'
 import ArtistLogo from '../assets/artistlogo.jpg'
 import IconButton from '@mui/material/Button';
-import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
 import SkipNextIcon from '@mui/icons-material/SkipNext';
+import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
+
 
 
 const VideoDetail = ({video}) => {
     const [ playState, setPlayState ] = useState(false);
+    
     
 
     const handlePlay = (event) => {
@@ -17,11 +19,7 @@ const VideoDetail = ({video}) => {
         setPlayState(prevCheck => !prevCheck);
 
     };
-
-    const handleNext = (event) =>{
-        let nextButton = document.getElementsByClassName("video-item item")
-        console.log(nextButton);
-    }
+    
 
 
 
@@ -55,11 +53,10 @@ const VideoDetail = ({video}) => {
 
 
   
-
-    const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;
+    
+    let videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;
     const videoLink =`https://youtu.be/${video.id.videoId}`
     const artistLink =`https://youtube.com/channel/${video.snippet.channelId}`
-
  
     return (
         
@@ -70,12 +67,13 @@ const VideoDetail = ({video}) => {
                 url={videoSrc} 
                 playing={playState}
                 width="100%"
-                height="100%" />
+                height="100%"
+                 />
             </div>
             <div className="btnRow">
-                <IconButton style={{backgroundColor: '#ea4f4c', color: '#FFFFFF'}} className="prevBtn"><SkipPreviousIcon/></IconButton>
+                <IconButton style={{backgroundColor: '#ea4f4c', color: '#FFFFFF'}}  className="prevBtn"><SkipPreviousIcon/></IconButton> 
                 <IconButton style={{backgroundColor: '#ea4f4c', color: '#FFFFFF'}} onClick={handlePlay} className="playBtn">Play</IconButton>
-                <IconButton style={{backgroundColor: '#ea4f4c', color: '#FFFFFF'}} onClick={handleNext} className="nextBtn"><SkipNextIcon/></IconButton>             
+                <IconButton style={{backgroundColor: '#ea4f4c', color: '#FFFFFF'}}  className="nextBtn"><SkipNextIcon/></IconButton>
                 </div>
             <div className='videoDescript'>
                 <h4 className='videoHeader'>{video.snippet.title}</h4>

@@ -1,4 +1,10 @@
-import React from 'react';
+import {
+    BrowserRouter as Router,
+    Route,
+    Link
+  } from "react-router-dom";
+
+
 import '../styles/header.css';
 
 
@@ -17,7 +23,10 @@ const Header = () =>{
                 <span className="logo">APP</span>
             </div>
             <ul className="navigation">
-                <li className="parent"  onClick={refreshPage}>Home</li>
+                <Router>
+                <li className="parent" onClick={refreshPage}><Link to="/" className="routeHome">Home</Link></li>
+                <Route exact path="/"/>
+                </Router>
             </ul>
     </nav>
     )
